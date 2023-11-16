@@ -1,0 +1,14 @@
+{
+    "model_name": "distilbert-base-uncased",
+    "truncation_strategy": "first",
+    "frozen": "False",
+    "device": "cuda:0",
+    "batch_size": 16,
+    "num_hidden": 768,
+    "max_tokens": 512,
+    "learning_rate": 5e-5,
+    "num_epochs": 50,
+    "loss_strategy":"weighted_bankruptcy",
+    "path_to_data_folder": "./frozen_splits",
+    "path_to_model_folder": "./models"
+}
