@@ -1,10 +1,18 @@
-# Audit Opinion Goin Concern Labelling (AOGCL)
+# Audit Opinion Going Concern Labelling (AOGCL)
 
 Automatic Audit Opinion Labelling for Going Concern Issues
 
 This is the accompanying code to our work: *"Identifying going concern issues in auditor opinions: link to bankruptcy events"*, done in the context of the *5th Financial Narrative Processing Workshop* (FNP2023@IEEE-BigData2023).
 
 In this work, our goal is to predict possible Going Concern issues given Auditors Opinion as found in the 10K report of the company in free-text form. The Going Concern issues that are used as candidate labels are the ones used by the [AuditAnalytics](https://www.auditanalytics.com/products/sec/audit-opinions) platform. More details on the going concern used can be found in the [AuditAnalytics 20-year review](https://www.auditanalytics.com/doc/AA_Going_Concerns_A_Twenty_Year_Review.pdf) (p.16 has also a list with some of the used going concern labels).
+
+
+## Demo
+You can access a demo app that runs inference on given audit opinion text in this [link](http://143.233.226.57:9001/).
+![Demo](streamlit_app/demo.png)
+
+In the folder streamlit_app you can find the sample code to deploy locally the demo app shown above.
+
 
 
 ## Installation
@@ -51,8 +59,11 @@ to do a hyper-parameter tuning on the *tf-idf + RF* pipeline used as a baseline.
 Currently, the above would result in an error, as **the data shared here are not annotated with the AuditAnalytic labels used in our analysis due to property rights**. For a subset of the labeled dataset please contact the authors after publication. Nonetheless, the **unlabeled frozen splits containing the auditor reports**, with other metadata as well, **are currently available and provided in the data folder** (need to be unzipped).
 
 
-## Notes
-The repository will be updated with the weights of the pre-trained models, as well as, an example application for running inference on a new given data sample.
+## Fine-tuned model
+You can use the best-performing model (distilbert weighted variants as proposed in the paper) from [here](https://owncloud.skel.iit.demokritos.gr/index.php/s/E9ASzpv8o8Bltz6).
+
+
+
 
 
 ## Citation
