@@ -117,10 +117,29 @@ with open("./samples.json", "r") as f:
 
 ############################# STREAMLIT APP ################################
 
-
 # Set page title and favicon
 st.set_page_config(
     page_title="📝 Audit Opinion Going Concern Labelling", page_icon="📝", layout="wide"
+)
+
+# First column with project information
+st.sidebar.title("")
+st.sidebar.image("app_logo.png")
+st.sidebar.write(
+    "Welcome to the **Audit Opinion Going Concern Labelling** (AOGCL) demo! This app uses a pre-trained LM to automatically predict Going Concern Issues based on auditor opinions."
+)
+st.sidebar.write(
+    "Explore the details of the project, check out the code on GitHub, and cite the paper if applicable."
+)
+st.sidebar.markdown(
+    "[![GitHub Repository](https://badgen.net/badge/icon/GitHub?icon=github&label)](https://github.com/kbogas/AuditOpinionClassification)"
+)
+# "[GitHub Repository](https://github.com/kbogas/AuditOpinionClassification)"
+
+
+st.sidebar.markdown("To Cite:")
+st.sidebar.write(
+    'Konstantinos Bougiatiotis, Elias Zavitsanos, Georgios Paliouras. *"Identifying going concern issues in auditor opinions: link to bankruptcy events"*. In proceedings of the 5th Financial Narrative Processing Workshop (FNP 2023) at the 2023 IEEE International Conference on Big Data (IEEE BigData 2023), Sorrento, Italy.'
 )
 
 # Main content area
